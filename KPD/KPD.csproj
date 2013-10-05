@@ -67,11 +67,28 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>KpdResource.resx</DependentUpon>
     </Compile>
+    <Compile Include="App_GlobalResources\KpdResource.en.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>KpdResource.en.resx</DependentUpon>
+    </Compile>
     <Compile Include="Controllers\BaseController.cs" />
+    <Compile Include="Controllers\PageTitle.cs" />
+    <Compile Include="Controllers\DAL\ConnectToMsSql.cs" />
+    <Compile Include="Controllers\DAL\DbCommand.cs" />
+    <Compile Include="Controllers\DAL\IConnectToDB.cs" />
+    <Compile Include="Controllers\DAL\Logger.cs" />
+    <Compile Include="Controllers\DAL\MsSqlHelper.cs" />
+    <Compile Include="Controllers\DAL\PageActions.cs" />
+    <Compile Include="Controllers\DAL\RequestParameter.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\Language.cs" />
+    <Compile Include="Controllers\PhoneType.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\FeedbackModel.cs" />
+    <Compile Include="Models\PageModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -157,6 +174,8 @@
     <Content Include="Content\themes\kpd\scripts\ENselecter.js" />
     <Content Include="Content\themes\kpd\scripts\jquery.innerfade.js" />
     <Content Include="Content\themes\kpd\scripts\jquery.js" />
+    <Content Include="Content\themes\kpd\scripts\jquery.validate.min.js" />
+    <Content Include="Content\themes\kpd\scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Content\themes\kpd\scripts\selecter.js" />
     <Content Include="Content\themes\kpd\styles\AdminKPD.css" />
     <Content Include="Content\themes\kpd\styles\KPD-IE.css" />
@@ -165,7 +184,6 @@
     <Content Include="Content\themes\kpd\styles\KPDservice_en.css" />
     <Content Include="Content\themes\kpd\styles\TxtStyle.css" />
     <Content Include="Global.asax" />
-    <Content Include="Content\Site.css" />
     <Content Include="Content\themes\kpd\scripts\jquery-1.9.1.js" />
     <Content Include="Content\themes\kpd\scripts\jquery-ui-1.8.11.js" />
     <Content Include="Content\themes\kpd\scripts\jquery-ui-1.8.11.min.js" />
@@ -184,7 +202,11 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Models\" />
+    <Content Include="App_GlobalResources\KpdResource.en.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>KpdResource.en.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
@@ -193,10 +215,17 @@
     <Content Include="App_GlobalResources\KpdResource.resx">
       <Generator>GlobalResourceProxyGenerator</Generator>
       <LastGenOutput>KpdResource.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
     </Content>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Home\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Home\Cooperation.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Home\Feedback.cshtml" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />

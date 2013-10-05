@@ -1,14 +1,4 @@
 ﻿<!DOCTYPE html>
-<!--<html>
-<head>
-	<title>@ViewBag.Title</title>
-	<link href="@Url.Content("~/Content/Site.css")" rel="stylesheet" type="text/css" />
-	<script src="@Url.Content("~/Scripts/jquery-1.9.1.js")" type="text/javascript"></script>
-</head>
-<body>
-
-</body>
-</html>-->
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 	<title>@ViewBag.Title</title>
@@ -39,10 +29,10 @@
 			</div>
 			<div class="localisation">
 				<ul>
-					<li><a href="@Url.Action("ChangeCulture", new { lang = "ru", returnUrl = this.Request.RawUrl })">
-						<input type="image" id="BtnRus" src="@Url.Content("~/Content/themes/kpd/images/rus_localization.png")" /></a></li>
-					<li><a href="@Url.Action("ChangeCulture", new { lang = "en", returnUrl = this.Request.RawUrl })">
-						<input type="image" id="BtnEng" src="@Url.Content("~/Content/themes/kpd/images/eng_localization.png")" />
+					<li><a href="@Url.Action("SwitchLocale", "Home", new { lang = "ru", returnUrl = this.Request.RawUrl })">
+						<img id="BtnRus" src="@Url.Content("~/Content/themes/kpd/images/rus_localization.png")" alt="ru" /></a></li>
+					<li><a href="@Url.Action("SwitchLocale", "Home", new { lang = "en", returnUrl = this.Request.RawUrl })">
+						<img id="BtnEng" src="@Url.Content("~/Content/themes/kpd/images/eng_localization.png")" alt="en" />
 					</a></li>
 				</ul>
 			</div>
@@ -53,19 +43,19 @@
 					</li>
 					<li id="brNews">|</li>
 					<li>
-						@Html.ActionLink(Resources.KpdResource.solution, "News", "Solution")
+						@Html.ActionLink(Resources.KpdResource.solution, "Solution", "Home")
 					</li>
 					<li>|</li>
 					<li>
-						@Html.ActionLink(Resources.KpdResource.cooperation, "News", "Cooperation")
+						@Html.ActionLink(Resources.KpdResource.cooperation, "Cooperation", "Home")
 					</li>
 					<li>|</li>
 					<li>
-						@Html.ActionLink(Resources.KpdResource.about, "News", "About")
+						@Html.ActionLink(Resources.KpdResource.about, "About", "Home")
 					</li>
 					<li>|</li>
 					<li>
-						@Html.ActionLink(Resources.KpdResource.about, "News", "Feedback")
+						@Html.ActionLink(Resources.KpdResource.feedback, "Feedback", "Home")
 					</li>
 				</ul>
 			</div>
@@ -106,7 +96,7 @@
 								</a>
 							</td>
 							<td style="padding-left: 5px;">
-								@Html.ActionLink(Resources.KpdResource.logistics, "Logistics", "Home")
+								<a href="@Url.Action("Logistics", "Home")">@Html.Raw(Resources.KpdResource.logistics)</a>
 							</td>
 						</tr>
 						<tr>
@@ -116,7 +106,7 @@
 								</a>
 							</td>
 							<td style="padding-left: 5px;">
-								@Html.ActionLink(Resources.KpdResource.translation, "Translation", "Home")
+								<a href="@Url.Action("Translation", "Home")" >@Html.Raw(Resources.KpdResource.translation)</a>
 							</td>
 						</tr>
 					</table>
@@ -126,15 +116,15 @@
 			</div>
 			<div class="presentation">
 				<div class="prPic">
-					<!--<img src="@Resources.KpdResource.pic5" alt ="img 5" />-->
+					<!--<img src="@Url.Content("~/Content/themes/kpd/images/pic-5.png")" alt ="img 5" />-->
 					<div id="portfolio">
-						<img src="@Url.Content(Resources.KpdResource.pic3)" alt="img 3" />
+						<img src="@Url.Content("~/Content/themes/kpd/images/pic-3.png")" alt="img 3" />
 						</a>
-						<img src="@Url.Content(Resources.KpdResource.pic4)" alt="img 4" />
+						<img src="@Url.Content("~/Content/themes/kpd/images/pic-4.png")" alt="img 4" />
 						</a>
-						<img src="@Url.Content(Resources.KpdResource.pic5)" alt="img 5" />
+						<img src="@Url.Content("~/Content/themes/kpd/images/pic-5.png")" alt="img 5" />
 						</a>
-						<img src="@Url.Content(Resources.KpdResource.pic6)" alt="img 6" />
+						<img src="@Url.Content("~/Content/themes/kpd/images/pic-6.png")" alt="img 6" />
 						</a>
 					</div>
 				</div>
@@ -169,7 +159,7 @@
 				</div>
 				<div class="mid">
 					<p id="contacts">
-						@Html.ActionLink(Resources.KpdResource.contacts, "Contacts", "Home", new { @style ="color:#FA5130" })
+						@Html.ActionLink(Resources.KpdResource.contacts, "Contacts", "Home", new { @style = "color:#FA5130" })
 					</p>
 					<div class="contactsCont">
 						@RenderSection("contacts", true)
@@ -183,7 +173,7 @@
 				</div>
 				<div class="mid">
 					<p id="partn">
-						@Html.ActionLink(Resources.KpdResource.partners, "Partners", "Home", new { @style ="color:#FA5130" })
+						@Html.ActionLink(Resources.KpdResource.partners, "Partners", "Home", new { @style = "color:#FA5130" })
 					</p>
 					<div class="icons">
 						<table>

@@ -11,17 +11,10 @@ namespace KPD.Controllers
 	{
 		//
 		// GET: /Base/
-
-		public ActionResult Index()
-		{
-			return View();
-		}
-
 		public ActionResult SwitchLocale(string lang, string returnUrl)
 		{
 			Session["Culture"] = new CultureInfo(lang);
 			return Redirect(returnUrl);
 		}
-
 	}
 }

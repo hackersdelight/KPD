@@ -97,7 +97,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Сотрудничество.
+        ///   Looks up a localized string similar to cотрудничество.
         /// </summary>
         internal static string cooperation {
             get {
@@ -111,15 +111,6 @@ namespace Resources {
         internal static string feedback {
             get {
                 return ResourceManager.GetString("feedback", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to ~/Content/themes/kpd/images/pic 1.gif.
-        /// </summary>
-        internal static string IEpic {
-            get {
-                return ResourceManager.GetString("IEpic", resourceCulture);
             }
         }
         
@@ -165,42 +156,6 @@ namespace Resources {
         internal static string partners {
             get {
                 return ResourceManager.GetString("partners", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to ~/Content/themes/kpd/images/pic-3.png.
-        /// </summary>
-        internal static string pic3 {
-            get {
-                return ResourceManager.GetString("pic3", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to ~/Content/themes/kpd/images/pic-4.png.
-        /// </summary>
-        internal static string pic4 {
-            get {
-                return ResourceManager.GetString("pic4", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to ~/Content/themes/kpd/images/pic-5.png.
-        /// </summary>
-        internal static string pic5 {
-            get {
-                return ResourceManager.GetString("pic5", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to ~/Content/themes/kpd/images/pic-6.png.
-        /// </summary>
-        internal static string pic6 {
-            get {
-                return ResourceManager.GetString("pic6", resourceCulture);
             }
         }
         

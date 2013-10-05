@@ -118,51 +118,51 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="about" xml:space="preserve">
-    <value>о нас</value>
+    <value>about</value>
   </data>
   <data name="address" xml:space="preserve">
-    <value>Адрес</value>
+    <value>Address</value>
   </data>
   <data name="certification" xml:space="preserve">
-    <value>Сертификация в Госстандарте</value>
+    <value>Certification in Gosstandart</value>
   </data>
   <data name="contacts" xml:space="preserve">
-    <value>Контакты</value>
+    <value>Contacts</value>
   </data>
   <data name="cooperation" xml:space="preserve">
-    <value>cотрудничество</value>
+    <value>cooperation</value>
   </data>
   <data name="feedback" xml:space="preserve">
-    <value>обратная связь</value>
+    <value>feedback</value>
   </data>
   <data name="IEslogan" xml:space="preserve">
-    <value>Вы там, где другие будут только завтра!</value>
+    <value>You are there where others will get only tomorrow!</value>
   </data>
   <data name="logistics" xml:space="preserve">
-    <value>Логистика и сопровождение проектов</value>
+    <value>Logistics and &lt;br/&gt;project support management</value>
   </data>
   <data name="logo_path" xml:space="preserve">
-    <value>~/Content/themes/kpd/images/logo-ru.png</value>
+    <value>~/Content/themes/kpd/images/logo-en.png</value>
   </data>
   <data name="news" xml:space="preserve">
-    <value>новости</value>
+    <value>news</value>
   </data>
   <data name="partners" xml:space="preserve">
-    <value>партнеры</value>
+    <value>Partners</value>
   </data>
   <data name="signature" xml:space="preserve">
     <value>~/Content/themes/kpd/images/copyright-in-cassandra.png</value>
   </data>
   <data name="slogan" xml:space="preserve">
-    <value>~/Content/themes/kpd/images/slogan_ru.png</value>
+    <value>~/Content/themes/kpd/images/slogan_en.png</value>
   </data>
   <data name="solution" xml:space="preserve">
-    <value>решения</value>
+    <value>solutions</value>
   </data>
   <data name="standard" xml:space="preserve">
-    <value>Разрешение на применение Госпромнадзора</value>
+    <value>Permission for Gospromnadzor</value>
   </data>
   <data name="translation" xml:space="preserve">
-    <value>Технический перевод</value>
+    <value>Technical&lt;br /&gt; translation</value>
   </data>
 </root>
