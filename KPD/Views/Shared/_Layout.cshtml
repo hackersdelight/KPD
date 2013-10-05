@@ -1,0 +1,204 @@
+﻿<!DOCTYPE html>
+<!--<html>
+<head>
+	<title>@ViewBag.Title</title>
+	<link href="@Url.Content("~/Content/Site.css")" rel="stylesheet" type="text/css" />
+	<script src="@Url.Content("~/Scripts/jquery-1.9.1.js")" type="text/javascript"></script>
+</head>
+<body>
+
+</body>
+</html>-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>@ViewBag.Title</title>
+	<link rel="icon" type="image/png" href="@Url.Content("~/Content/themes/kpd/images/favicon.ico")" />
+	<!--[if lte IE 8]>
+	<style>
+			#portfolio
+			{
+					visibility:hidden;
+			}
+			</style>
+	<![endif]-->
+	<link type="text/css" href="@Url.Content("~/Content/themes/kpd/styles/KPDservice.css")" rel="stylesheet" type="text/css" />
+	<link type="text/css" href="@Url.Content("~/Content/themes/kpd/styles/TxtStyle.css")"rel="stylesheet" type="text/css" />
+	<script type="text/javascript" src="@Url.Content("~/Content/themes/kpd/scripts/jquery.js")"></script>
+	<script type="text/javascript" src="@Url.Content("~/Content/themes/kpd/scripts/selecter.js")"></script>
+	<script type="text/javascript" src="@Url.Content("~/Content/themes/kpd/scripts/jquery.innerfade.js")"></script>
+	<script type="text/javascript" src="@Url.Content("~/Content/themes/kpd/scripts/autoChanger.js")"></script>
+</head>
+<body>
+	<form id="KPDform" runat="server">
+	<div class="mainContainer">
+		<div class="header">
+			<div class="logo">
+				<a href="@Url.Action("Index", "Home")">
+					<input type="image" id="BtnLogo" src="@Url.Content(Resources.KpdResource.logo_path)"/>
+				</a>
+			</div>
+			<div class="localisation">
+				<ul>
+					<li><a href="@Url.Action("ChangeCulture", new { lang = "ru", returnUrl = this.Request.RawUrl })">
+						<input type="image" id="BtnRus" src="@Url.Content("~/Content/themes/kpd/images/rus_localization.png")" /></a></li>
+					<li><a href="@Url.Action("ChangeCulture", new { lang = "en", returnUrl = this.Request.RawUrl })">
+						<input type="image" id="BtnEng" src="@Url.Content("~/Content/themes/kpd/images/eng_localization.png")" />
+					</a></li>
+				</ul>
+			</div>
+			<div class="headerMenu">
+				<ul>
+					<li id="BtnNews">
+						@Html.ActionLink(Resources.KpdResource.news, "News", "Home")
+					</li>
+					<li id="brNews">|</li>
+					<li>
+						@Html.ActionLink(Resources.KpdResource.solution, "News", "Solution")
+					</li>
+					<li>|</li>
+					<li>
+						@Html.ActionLink(Resources.KpdResource.cooperation, "News", "Cooperation")
+					</li>
+					<li>|</li>
+					<li>
+						@Html.ActionLink(Resources.KpdResource.about, "News", "About")
+					</li>
+					<li>|</li>
+					<li>
+						@Html.ActionLink(Resources.KpdResource.about, "News", "Feedback")
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="subHeader">
+			<div class="slogan">
+				<input type="image" src="@Url.Content(Resources.KpdResource.slogan)" />
+			</div>
+			<div class="direcion">
+				<div class="menuTop">
+				</div>
+				<div class="menuMid">
+					<table id="menu">
+						<tr>
+							<td>
+								<a href="@Url.Action("Certification", "Home")">
+									<input type="image" id="BtnCertification" src="@Url.Content("~/Content/themes/kpd/images/certification.png")" />
+								</a>
+							</td>
+							<td style="padding-left: 5px;">
+								@Html.ActionLink(Resources.KpdResource.certification, "Certification", "Home")
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<a href="@Url.Action("GosPromNadzor", "Home")">
+									<input type="image" id="BtnGosPromNadzor" src="@Url.Content("~/Content/themes/kpd/images/gosPromNadzor.png")" />
+								</a>
+							</td>
+							<td style="padding-left: 5px;">
+								@Html.ActionLink(Resources.KpdResource.standard, "GosPromNadzor", "Home")
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<a href="@Url.Action("Logistics", "Home")">
+									<input type="image" id="BtnLogistics" src="@Url.Content("~/Content/themes/kpd/images/logistics.png")" />
+								</a>
+							</td>
+							<td style="padding-left: 5px;">
+								@Html.ActionLink(Resources.KpdResource.logistics, "Logistics", "Home")
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<a href="@Url.Action("Translation", "Home")">
+									<input type="image" id="BtnTranslation" src="@Url.Content("~/Content/themes/kpd/images/translation.png")" />
+								</a>
+							</td>
+							<td style="padding-left: 5px;">
+								@Html.ActionLink(Resources.KpdResource.translation, "Translation", "Home")
+							</td>
+						</tr>
+					</table>
+				</div>
+				<div class="menuBottom">
+				</div>
+			</div>
+			<div class="presentation">
+				<div class="prPic">
+					<!--<img src="@Resources.KpdResource.pic5" alt ="img 5" />-->
+					<div id="portfolio">
+						<img src="@Url.Content(Resources.KpdResource.pic3)" alt="img 3" />
+						</a>
+						<img src="@Url.Content(Resources.KpdResource.pic4)" alt="img 4" />
+						</a>
+						<img src="@Url.Content(Resources.KpdResource.pic5)" alt="img 5" />
+						</a>
+						<img src="@Url.Content(Resources.KpdResource.pic6)" alt="img 6" />
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="content">
+			<table id="contTable">
+				<tr>
+					<td>
+						@RenderBody()
+					</td>
+				</tr>
+			</table>
+		</div>
+		<div class="footer">
+			<div class="address">
+				<div class="addrLeft">
+				</div>
+				<div class="mid">
+					<p id="addr">
+						@Html.ActionLink(Resources.KpdResource.address, "Contacts", "Home", new { @style = "color:#FA5130" })
+					</p>
+					<div class="addrCont">
+						@RenderSection("address", true)
+					</div>
+				</div>
+				<div class="addrRight">
+				</div>
+			</div>
+			<div class="contacts">
+				<div class="contLeft">
+				</div>
+				<div class="mid">
+					<p id="contacts">
+						@Html.ActionLink(Resources.KpdResource.contacts, "Contacts", "Home", new { @style ="color:#FA5130" })
+					</p>
+					<div class="contactsCont">
+						@RenderSection("contacts", true)
+					</div>
+				</div>
+				<div class="contRight">
+				</div>
+			</div>
+			<div class="partners">
+				<div class="partnLeft">
+				</div>
+				<div class="mid">
+					<p id="partn">
+						@Html.ActionLink(Resources.KpdResource.partners, "Partners", "Home", new { @style ="color:#FA5130" })
+					</p>
+					<div class="icons">
+						<table>
+							@RenderSection("icons", true)
+						</table>
+					</div>
+				</div>
+				<div class="partnRight">
+				</div>
+			</div>
+			<div class="signature">
+				<input type="image" src="@Url.Content(Resources.KpdResource.signature)" />
+			</div>
+		</div>
+	</div>
+	</form>
+</body>
+</html>
